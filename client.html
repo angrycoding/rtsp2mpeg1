@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="jsmpeg.min.js"></script>
+	</head>
+	<body>
+
+		<canvas id="canvas"></canvas>
+
+		<script type="text/javascript">
+			var player = new JSMpeg.Player('ws://127.0.0.1:9999/CAMERA_ID', {
+				audio: true,
+				// autoplay: true,
+				// pauseWhenHidden: false,
+				canvas: document.getElementById('canvas')
+			});
+		</script>
+
+	</body>
+</html>
