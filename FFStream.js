@@ -51,6 +51,7 @@ class FFStream {
 	}
 
 	onData(data) {
+		if (!this.stream) return;
 		var sockets = this.sockets;
 		for (var c = 0; c < sockets.length; c++) {
 			var socket = sockets[c];

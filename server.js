@@ -12,7 +12,8 @@ const FFMPEG_OPTIONS = [
 	'-codec:a', 'mp2',
 	'-ar', '44100',
 	'-ac', '1',
-	'-b:a', '64k'
+	'-b:a', '64k',
+	'-q', '1'
 ];
 
 
@@ -21,7 +22,7 @@ const FFMPEG_OPTIONS = [
 wsServer.on("connection", (socket, request) => {
 	var cameraId = request.url.slice(1);
 	makeStream(
-		`rtsp://192.168.0.12:554/user=admin_password=tlJwpbo6_channel=1_stream=1.sdp_foo=${cameraId}`,
+		`rtsp://192.168.0.17:554/user=admin_password=tlJwpbo6_channel=1_stream=1.sdp_foo=${cameraId}`,
 		FFMPEG_OPTIONS,
 		socket
 	);
