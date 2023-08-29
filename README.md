@@ -21,6 +21,7 @@ Haha I'm kidding, it's not going to work because you can't just display RTSP str
 The reason why it's not working is because HTML5 video can only display something MPEG based, MP4, MOV, MKV - all this is just a containers for H264 codec format.
 
 So our next step will be to convert RTSP in something that browser can understand and render in HTML5 video tag. To keep it really simple we will use [MPEG1](https://en.wikipedia.org/wiki/MPEG-1)
-this time.
+this time. So mpeg1 is just very ancient and simpliest variation of video compression algorithm that is in the mean time understandable by the web - browser and can be relatively simple produced 
+out of RTSP stream that's coming out of the camera.
 
 
