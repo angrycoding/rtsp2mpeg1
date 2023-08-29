@@ -11,4 +11,16 @@ you're looking to something like this:
 rtsp://192.168.1.105:554/user=admin_password=x761219pQsVnr2VS_channel=1_stream=0.sdp
 ```
 
+Once you get there, the rest is easy, just open your favourite text editor and type something like: 
+
+```
+<video src="rtsp://192.168.1.105:554/user=admin_password=x761219pQsVnr2VS_channel=1_stream=0.sdp"></video>
+```
+
+Haha I'm kidding, it's not going to work because you can't just display RTSP stream from the camera in HTML5 video element, it's just not going to work.
+The reason why it's not working is because HTML5 video can only display something MPEG based, MP4, MOV, MKV - all this is just a containers for H264 codec format.
+
+So our next step will be to convert RTSP in something that browser can understand and render in HTML5 video tag. To keep it really simple we will use [MPEG1](https://en.wikipedia.org/wiki/MPEG-1)
+this time.
+
 
